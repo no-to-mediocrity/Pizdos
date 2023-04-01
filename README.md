@@ -26,7 +26,7 @@ Once the program is running, you will see a menu with several options:
 Use the number keys to select an option and press enter to execute it. The program will display the cat's current state and provide feedback on the action you have taken.
 
 The cat's current state is represented by various ASCII art images, which change depending on the cat's health, weight, and age.
-About the Code
+## About the Code
 
 The project is written in Kotlin and uses the Java standard library for input and output. The program uses a fixed-rate timer to update the display every second.
 
