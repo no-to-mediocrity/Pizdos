@@ -1,5 +1,13 @@
 # Pizdos - A Hardworking Cat 
 
+             ______,   ,|\/|.
+            |  Y  |  (` O  O\    .--------.
+            |_____|__\ =<_>=/  <'  Pizdos! |
+            ."    \\    )        '--------'
+           /    ,    \/\_
+      _____|    )_-\ \_-`
+     `-----'`-----` `--`
+
 ## Description
 Pizdos is not just an ordinary cat, he is a hard worker who is always up for a challenge. Despite his health challenges, Pizdos remains determined and perseveres through all obstacles. Through this project, you'll get to know Pizdos and follow his journey as he tackles various tasks, from going to work to getting old. Along the way, you'll learn about the importance of resilience and hard work, and how these traits can help us overcome even the toughest challenges in life.
 
