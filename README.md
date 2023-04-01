@@ -33,3 +33,7 @@ The project is written in Kotlin and uses the Java standard library for input an
 The Cat class represents the virtual cat and contains various properties that determine the cat's state. The getInput function processes user input and updates the cat's state accordingly. The displayMenu function updates the display and shows the user the cat's current state.
 
 The program also contains several ASCII art images that represent the cat's current state. These images are stored as string literals and are displayed on the console using the println function.
+
+## Download 
+[Compiled Pizdos v.0.1](https://github.com/no-to-mediocrity/Pizdos/blob/master/build/Cat.jar)
+
