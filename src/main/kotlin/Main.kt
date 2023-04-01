@@ -82,7 +82,7 @@ fun displayMenu(cat: Cat){
     println("   👴 Age: ${cat.age} ⚖️  Weight: ${(df.format(cat.weight))} kg ❤️  Health: ${cat.health}")
     println("")
     if (cat.alive == true) {
-        println("   Choose an action (type the number, then press enter):")
+        println("   Choose an action (type the number, then press Enter):")
         println("   1. Feed the cat 🐟")
         println("   2. Give medicine 💊")
         println("   3. Let the cat rest 😴")
@@ -104,7 +104,7 @@ fun updateCat(cat: Cat){
     if (cat.age == 25) {
         if ((0..100).random() == 0) {
             cat.alive = false
-            cat.message = "The cat has died because of the old age.\n   Press \"5\" to exit."
+            cat.message = "The cat has died because of the old age.\n  Type \"5\" and then press Enter to exit."
         }
     }
     if (cat.weight >= 12){
@@ -114,19 +114,19 @@ fun updateCat(cat: Cat){
     }
     if (cat.health <= 0) {
         cat.alive = false
-        cat.message = "The cat has died because its health reached zero.\n   Press \"5\" to exit."
+        cat.message = "The cat has died because its health reached zero.\n   Type \"5\" and then press Enter to exit."
     }
     if (cat.weight <= 2) {
         cat.alive = false
-        cat.message = "The cat has died because of starvation.\n   Press \"5\" to exit."
+        cat.message = "The cat has died because of starvation.\n   Type \"5\" and then press Enter to exit."
     }
     if (cat.weight >= 15) {
         cat.alive = false
-        cat.message = "The cat has died because it was too obese.\n   Press \"5\" to exit."
+        cat.message = "The cat has died because it was too obese.\n   Type \"5\" and then press Enter to exit."
     }
     if (cat.alive) {
         // Check if the cat randomly gets sick and stops working
-        if ((0..250).random() == 0) {
+        if ((0..250).random() == 0 && cat.alive) {
             cat.message = "The cat got sick!"
             cat.sick = true
             cat.working = false
@@ -135,7 +135,7 @@ fun updateCat(cat: Cat){
         }
 
         // Check if the cat randomly poops
-        if (((0..100).random() == 0) && !cat.sick && !cat.working) {
+        if (((0..100).random() == 0) && !cat.sick && !cat.working && cat.alive) {
             cat.message = "The cat is pooping!"
             cat.actioncount = 0
             cat.toilet = true
