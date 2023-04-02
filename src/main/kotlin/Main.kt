@@ -97,36 +97,36 @@ fun displayMenu(cat: Cat){
 }
 
 fun updateCat(cat: Cat){
-    if (cat.cycle == 0) {
-        cat.cycle = 100
-        cat.grow()
-    }
-    if (cat.age == 25) {
-        if ((0..100).random() == 0) {
-            cat.alive = false
-            cat.message = "The cat has died because of the old age.\n  Type \"5\" and then press Enter to exit."
-        }
-    }
-    if (cat.weight >= 12){
-        if ((0..10).random() == 0) {
-            cat.health -= 5
-        }
-    }
-    if (cat.health <= 0) {
-        cat.alive = false
-        cat.message = "The cat has died because its health reached zero.\n   Type \"5\" and then press Enter to exit."
-    }
-    if (cat.weight <= 2) {
-        cat.alive = false
-        cat.message = "The cat has died because of starvation.\n   Type \"5\" and then press Enter to exit."
-    }
-    if (cat.weight >= 15) {
-        cat.alive = false
-        cat.message = "The cat has died because it was too obese.\n   Type \"5\" and then press Enter to exit."
-    }
     if (cat.alive) {
+        if (cat.cycle == 0) {
+            cat.cycle = 100
+            cat.grow()
+        }
+        if (cat.age == 25) {
+            if ((0..100).random() == 0) {
+                cat.alive = false
+                cat.message = "The cat has died because of the old age.\n  Type \"5\" and then press Enter to exit."
+            }
+        }
+        if (cat.weight >= 12){
+            if ((0..10).random() == 0) {
+                cat.health -= 5
+            }
+        }
+        if (cat.health <= 0) {
+            cat.alive = false
+            cat.message = "The cat has died because its health reached zero.\n   Type \"5\" and then press Enter to exit."
+        }
+        if (cat.weight <= 2) {
+            cat.alive = false
+            cat.message = "The cat has died because of starvation.\n   Type \"5\" and then press Enter to exit."
+        }
+        if (cat.weight >= 15) {
+            cat.alive = false
+            cat.message = "The cat has died because it was too obese.\n   Type \"5\" and then press Enter to exit."
+        }
         // Check if the cat randomly gets sick and stops working
-        if ((0..250).random() == 0 && cat.alive) {
+        if ((0..250).random() == 0) {
             cat.message = "The cat got sick!"
             cat.sick = true
             cat.working = false
@@ -135,12 +135,11 @@ fun updateCat(cat: Cat){
         }
 
         // Check if the cat randomly poops
-        if (((0..100).random() == 0) && !cat.sick && !cat.working && cat.alive) {
+        if (((0..100).random() == 0) && !cat.sick && !cat.working) {
             cat.message = "The cat is pooping!"
             cat.actioncount = 0
             cat.toilet = true
         }
-
         // Update cat's status based on current action
         when {
             cat.working -> {

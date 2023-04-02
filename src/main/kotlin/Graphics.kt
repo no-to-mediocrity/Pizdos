@@ -41,7 +41,7 @@ val catascii = """
 
 val catascii_eating = """
                      ,|\/|.
-                    (` ○  ○\
+                    (` ^  ^\
               __,.- \ =<_>=/
             .\"        )
            /    ,    \/\_    
