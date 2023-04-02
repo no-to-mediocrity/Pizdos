@@ -23,44 +23,54 @@ fun main() {
 }
 
 fun getInput(input: String, cat: Cat) {
-    when (input) {
-        "1" -> {
-            if (cat.money >= 2) {
-                cat.money -= 2
-                cat.eat()
-                cat.message = "The cat has been fed!"
-            } else {
-                cat.message = "Not enough money to eat!"
-            }
-        }
-        "2" -> {
-            if (cat.money >= 5) {
-                cat.money -=5
-                if (cat.health+10 >= 100){
-                    cat.health = 100
+    if (cat.alive == true) {
+        when (input) {
+            "1" -> {
+                if (cat.money >= 2) {
+                    cat.money -= 2
+                    cat.eat()
+                    cat.message = "The cat has been fed!"
                 } else {
-                    cat.health += 10
+                    cat.message = "Not enough money to eat!"
                 }
-                cat.sick = false
-                cat.message = "The cat has been given medicine!"
-            } else {
-                cat.message = "Not enough money to buy the medicine!"
             }
-        }
-        "3" -> {
-            cat.actioncount = 0
-            cat.resting = true
-            cat.message ="The cat is resting!"
-        }
-        "4" -> {
-            if (cat.sick == false) {
-                cat.working = true
-                cat.message = "The cat went to work!"
-            } else {
-                cat.message = "Can't go to work when sick!"
+
+            "2" -> {
+                if (cat.money >= 5) {
+                    cat.money -= 5
+                    if (cat.health + 10 >= 100) {
+                        cat.health = 100
+                    } else {
+                        cat.health += 10
+                    }
+                    cat.sick = false
+                    cat.message = "The cat has been given medicine!"
+                } else {
+                    cat.message = "Not enough money to buy the medicine!"
+                }
             }
+
+            "3" -> {
+                cat.actioncount = 0
+                cat.resting = true
+                cat.message = "The cat is resting!"
+            }
+
+            "4" -> {
+                if (cat.sick == false) {
+                    cat.working = true
+                    cat.message = "The cat went to work!"
+                } else {
+                    cat.message = "Can't go to work when sick!"
+                }
+            }
+
+            "5" -> exitProcess(0)
         }
-        "5" ->  exitProcess(0)
+    } else {
+        when (input) {
+            "5" -> exitProcess(0)
+        }
     }
     // Process the user's input here
 }
