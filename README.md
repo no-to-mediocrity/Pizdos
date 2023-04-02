@@ -35,4 +35,4 @@ The Cat class represents the virtual cat and contains various properties that de
 The program also contains several ASCII art images that represent the cat's current state. These images are stored as string literals and are displayed on the console using the println function.
 
 ## Download
-[Compiled Pizdos v.0.2](https://github.com/no-to-mediocrity/Pizdos/blob/master/out/artifacts/Cat_jar/Cat.jar)
+[Compiled Pizdos v.0.3](https://github.com/no-to-mediocrity/Pizdos/blob/master/out/artifacts/Cat_jar/Cat.jar)
